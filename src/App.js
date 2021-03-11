@@ -3,6 +3,7 @@ import './App.scss';
 import { getData } from "./api/index"; //mock API response that contains the card data
 import Card from './components/Card';
 import LoadingSpinner from './components/LoadingSpinner';
+import Error from './components/Error';
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
   const [isLoading, setIsLoading] = useState(true); //Loading spinner state
   const [data, setData] = useState([]); //Card data state
   const [selected, setSelected] = useState(null); //Selected card state
+  const [error, setError] = useState(false); //Error state
 
   //Fetch the data on component mount
   useEffect(() => {
@@ -19,6 +21,7 @@ function App() {
         const resp = await getData();
         setData(resp.data); 
       } catch (error) {
+        setError(true); 
         console.log(error);
       }
       setIsLoading(false);
@@ -31,7 +34,9 @@ function App() {
       <div className="centered">
         {isLoading ? <LoadingSpinner /> : 
           <>
-            {data.map(item => {
+            {error ? <Error /> : 
+              <>
+                {data.map(item => {
                   return <Card 
                           key={item.id} 
                           data={item} 
@@ -39,6 +44,8 @@ function App() {
                           setSelected={setSelected} 
                         />
                 })}
+              </>
+            }
           </>
         }
       </div>
