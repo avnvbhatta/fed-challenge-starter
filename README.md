@@ -1,38 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Notes
 
-# Challenge Instructions
+I am excited to move forward with the interview process at iFit! Thank you for your time and consideration. 
 
-Thanks for your interest in becoming a member of iFit's front end team! As part of the application process, we ask that you complete the following challenge.
+I have simply forked the repo that was provided to me. The only additional package that I have used is node-sass (as it was required as per the job description as well).
 
-## What do I do?
+I plan on hosting the application live on Netlify after I am done with the project. I will provide the link to the application shortly.
 
-This repo includes a very basic initialization of the `create-react-app` framework, along with the challenge instructions.
+To run the application manually, please download the entire zip file.
 
-Your task is to build out a single page section based on the provided designs (included below under Required Assets). Your work will be judged based on how well it matches the designs, how well you've implemented at least basic responsive functionality, and your code's cleanliness and structure.
+In the project directory, please run the following commands in order:
 
-In addition, we ask that you show off your state management skills by adding select functionality for each of the cards. When clicked, they should reflect the active state pictured in the designs (top left card, with increased box-shadow).
+### `npm install`
+### `npm start`
 
- It's okay to adjust any part of the initial project setup to fit your needs and desired workflow. Bonus points for showing off your animation chops!
-
-## How do I submit?
-
-Here's the ideal workflow:
-- Fork this repository
-- Make it look amazing
-- Push your version up to a public repository
-- Submit the link in your communications with our hiring department
-- (Optional): host your code at a live URL and share that link, as well
-
-## How long do I have?
-
-Although there's no hard time limit, we ask that you shoot to complete the actual coding portion within 2 hours of starting (on your honor).
-
-## Required Assets
-
-All required images have been exported for your use and are included at the link below.
-
-- [Design document and images](https://www.dropbox.com/sh/qszv92itgpf317c/AAAynYQ_ERvkm0e5MaDivyqfa?dl=0)
-- [Open Sans font](https://fonts.google.com/specimen/Open+Sans)
+In doing so, the app runs in the development mode.<br />
+Please navigate to [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 # Create React App Info
 

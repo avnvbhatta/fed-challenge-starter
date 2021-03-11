@@ -1,24 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
 import './App.scss';
+import { getData } from "./api/index"; //mock API response that contains the card data
+import Card from './components/Card';
+
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(true); //Loading spinner state
+  const [data, setData] = useState([]); //Card data state
+  const [selected, setSelected] = useState(null); //Selected card state
+
+  //Fetch the data on component mount
+  useEffect(() => {
+    //Async function to wait for data to load
+    const getCardsData = async () => {
+      try {
+        const resp = await getData();
+        setData(resp.data); 
+      } catch (error) {
+        console.log(error);
+      }
+      setIsLoading(false);
+    }
+    getCardsData(); 
+  }, [])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="centered">
+        {isLoading ? <div>Loading</div> : 
+          <>
+            {data.map(item => {
+                  return <Card 
+                          key={item.id} 
+                          data={item} 
+                          selected={selected}
+                          setSelected={setSelected} 
+                        />
+                })}
+          </>
+        }
+      </div>
     </div>
   );
 }
