@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './App.scss';
 import { getData } from "./api/index"; //mock API response that contains the card data
 import Card from './components/Card';
+import LoadingSpinner from './components/LoadingSpinner';
 
 
 function App() {
@@ -28,7 +29,7 @@ function App() {
   return (
     <div className="container">
       <div className="centered">
-        {isLoading ? <div>Loading</div> : 
+        {isLoading ? <LoadingSpinner /> : 
           <>
             {data.map(item => {
                   return <Card 
