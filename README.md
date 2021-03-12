@@ -4,7 +4,7 @@ I am excited to move forward with the interview process at iFit! Thank you for y
 
 I have simply forked the repo that was provided to me. The only additional package that I have used is node-sass (as it was required as per the job description as well).
 
-I plan on hosting the application live on Netlify after I am done with the project. I will provide the link to the application shortly.
+The application has been hosted [here](https://abhinav-bhatta-ifit-fed-challenge.netlify.app/).
 
 To run the application manually, please download the entire zip file.
 
@@ -15,6 +15,10 @@ In the project directory, please run the following commands in order:
 
 In doing so, the app runs in the development mode.<br />
 Please navigate to [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+Thank you again for the time and consideration!
+
+Please let me know if you have any questions/concerns.
 
 # Create React App Info
 
